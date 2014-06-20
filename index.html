@@ -1,0 +1,102 @@
+<html lang="en">
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><title>充值中心</title>
+<link type="text/css" rel="stylesheet" href="css/normalize.css" />
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+ 
+<body>
+	<!-- header -->
+	<header class="header">
+		充值中心
+		<div class="charge-user-status">
+			<a href="" id="charge-user-logined"></a>
+			<span id="charge-msg-num">3</span>
+		</div>
+	</header>
+	<!-- /header -->
+
+	<!-- ad -->
+	<div class="ad-full-block">
+		<a href=""><img class="ad-full" src="img/banner-ad.png" alt="ad"></a>
+		<button class="cancel-ad"></button>
+	</div>
+	<!-- /ad -->
+
+	<!-- nav -->
+	<div class="charge-nav-container">
+		<ul class="charge-nav">
+			<li><a href="" class="act"><span class="charge-nav-ico charge-nav-phone"></span><span class="charge-nav-txt">充话费</span></a></li>
+			<li><a href=""><span class="charge-nav-ico charge-nav-qq"></span><span class="charge-nav-txt">充Q币</span></a></li>
+			<li><a href=""><span class="charge-nav-ico charge-nav-lottery"></span><span class="charge-nav-txt">买彩票</span></a></li>
+			<li><a href=""><span class="charge-nav-ico charge-nav-more"></span><span class="charge-nav-txt">更多</span></a></li>
+			<div class="clear"></div>
+			<!-- <div class="charge-nav-more-down-dark"></div> -->
+		</ul>
+		<div class="charge-nav-down-block">
+			<ul class="charge-nav charge-nav-down">
+				<li><a href=""><span class="charge-nav-ico charge-nav-game"></span><span class="charge-nav-txt">充网游</span></a></li>
+				<li><a href=""><span class="charge-nav-ico charge-nav-insurance"></span><span class="charge-nav-txt">买保险</span></a></li>
+				<li><a href=""><span class="charge-nav-ico charge-nav-card"></span><span class="charge-nav-txt">信用卡还贷</span></a></li>
+				<li><a href=""><span class="charge-nav-ico charge-nav-life"></span><span class="charge-nav-txt">生活缴费</span></a></li>
+				<div class="clear"></div>
+			</ul>
+			<div class="seperation-dotted-2-block">
+				<div class="seperation-dotted-2"></div>
+			</div>
+			<ul class="charge-nav charge-nav-down">
+				<li><a href=""><span class="charge-nav-ico charge-nav-movie"></span><span class="charge-nav-txt">买电影票</span></a></li>
+				<li><a href=""><span class="charge-nav-ico charge-nav-coin"></span><span class="charge-nav-txt">游戏币交易</span></a></li>
+				<div class="clear"></div>
+				<div class="charge-nav-more-down-box">
+					<div class="charge-nav-more-down"></div>
+				</div>
+			</ul>
+		</div>
+	</div>
+	<!-- /nav -->
+
+	<!-- main -->
+	<div class="main">
+		<div class="shadow-block"></div>
+		<form action="" id="charge-form">
+			<div class="charge-privilege margin-btm-10">现在充值话费，享96折优惠！</div>
+			<div class="charge-phone-num-block margin-btm-10">
+				<label for="charge-phone-num"></label>
+				<input type="text" placeholder="请输入手机号" name="charge-phone-num" id="charge-phone-num" maxlength="13" autocomplete="off">
+				<input type="text" name="charge-phone-num-bk" id="charge-phone-num-bk" class="hidden">
+				<button class="choose-phone-num"></button>
+				<ul class="num-list">
+					<li>134-5563-9876</li>
+					<li>135-9087-6900</li>
+					<li>187-6586-4790</li>
+					<li>132-0987-1234</li>
+				</ul>
+			</div>
+			<div class="charge-location margin-btm-10"></div>
+			<div class="seperation-dotted"></div>
+			<ul class="charge-price-items margin-btm-10">
+				<li class="act">10<span>元</span></li>
+				<li>20<span>元</span></li>
+				<li>30<span>元</span></li>
+			</ul>
+			<ul class="charge-price-items margin-btm-10">
+				<li>50<span>元</span></li>
+				<li>100<span>元</span></li>
+				<li>300<span>元</span></li>
+			</ul>
+			<input type="text" name="charge-input-price" id="charge-input-price" value="10" class="hidden">
+			<div class="charge-price margin-btm-10">售价：<span>￥9.8-9.95</span></div>
+			<div class="seperation-dotted"></div>
+			<input type="submit" value="立即充值" id="submit">
+		</form>
+	</div>
+
+	<!-- /main -->
+</body>
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/mainjs.js"></script>
+
+</html>

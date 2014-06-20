@@ -1,0 +1,350 @@
+/*
+ *  公共
+ */
+* {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+}
+img{
+	border: none;
+	-ms-interpolation-mode: bicubic;
+}
+.hidden {
+	display: none;
+}
+.clear {
+	clear: both;
+}
+.seperation-dotted {
+	width: 100%;
+	height: 1px;
+	margin-bottom: 10px;
+	border-bottom: 1px dashed #d5d5d5;
+}
+.seperation-dotted-2-block {
+	padding: 5px 10px;
+}
+.seperation-dotted-2 {
+	width: 100%;
+	height: 1px;
+	border-bottom: 1px dashed #c7c1be;
+}
+.margin-btm-10 {
+	margin-bottom: 10px;
+}
+
+/*
+ * 头部
+ */
+.header {
+	padding: 10px;
+	background: #d40404;
+	position: relative;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	z-index: 40;
+}
+.charge-user-status {
+	width: 34px;
+	height: 24px;
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	text-align: center;
+	border: 2px solid #b00000;
+	border-radius: 3px;
+}
+.charge-user-status #charge-user-logined {
+	width: 19px;
+	height: 19px;
+	background: url(../img/icons.png) no-repeat 0 -305px;
+	margin-top: 2px;
+	display: inline-block;
+}
+.charge-user-status #charge-user-nologin {
+	width: 19px;
+	height: 19px;
+	background: url(../img/icons.png) no-repeat 0 -326px;
+	margin-top: 2px;
+	display: inline-block;
+}
+.charge-user-status #charge-msg-num {
+	width: 18px;
+	height: 17px;
+	padding-top: 3px;
+	padding-left: 1px;
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	color: #675943;
+	font-size: 10px;
+	background: url(../img/ico-msg.png) no-repeat;
+}
+
+/*
+ * 
+ */
+.ad-full-block {
+	position: relative;
+	z-index: 30;
+}
+.ad-full-block > a {
+	display: inline-block;
+}
+.ad-full {
+	width: 100%;
+}
+.cancel-ad {
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	border: none;
+	background: url(../img/icons.png) no-repeat 0 -387px;
+}
+
+/*
+ * 导航菜单栏
+ */
+.charge-nav {
+	position: absolute;
+	z-index: 20;
+}
+.charge-nav li {
+	width: 25%;
+	float: left;
+	list-style-type: none;
+}
+.charge-nav li a {
+	height: 66px;
+	display: block;
+	text-decoration: none;
+	background: #ede0d9;
+	color: #c2aeac;
+	border-right: 1px solid #d5c9c3;
+	border-bottom: 1px solid #d5c9c3;
+	text-align: center;
+}
+.charge-nav .charge-nav-ico {
+	background: url(../img/icons.png) no-repeat;
+	display: inline-block;
+	margin-top: 10px;
+}
+.charge-nav .charge-nav-txt {
+	padding: 5px 0 10px 0;
+	display: block;
+}
+.charge-nav .act {
+	background: #f9f1ed;
+	color: #d40404;
+}
+.charge-nav .charge-nav-phone {
+	width: 20px;
+	height: 28px;
+	background-position: 0 -181px;
+}
+.charge-nav .charge-nav-qq {
+	width: 25px;
+	height: 28px;
+	background-position: 0 -213px;
+}
+.charge-nav .charge-nav-lottery {
+	width: 28px;
+	height: 28px;
+	background-position: 0 -243px;
+}
+.charge-nav .charge-nav-more {
+	width: 28px;
+	height: 28px;
+	background-position: 0 -150px;
+}
+.charge-nav .charge-nav-more-down-box {
+	width: 25%;
+	height: 7px;
+	position: absolute;
+	right: 0;
+}
+.charge-nav .charge-nav-more-down {
+	width: 28px;
+	height: 7px;
+	margin: 0 auto;
+	background: url(../img/ico-more-down.png) no-repeat 0 0;
+}
+.charge-nav .charge-nav-game {
+	width: 30px;
+	height: 25px;
+	background-position: -1 -60px;
+}
+.charge-nav .charge-nav-insurance {
+	width: 30px;
+	height: 25px;
+	background-position: 0 -91px;
+}
+.charge-nav .charge-nav-card {
+	width: 29px;
+	height: 27px;
+	background-position: 0 0;
+}
+.charge-nav .charge-nav-life {
+	width: 30px;
+	height: 26px;
+	background-position: -1px -119px;
+}
+.charge-nav .charge-nav-movie {
+	width: 28px;
+	height: 23px;
+	background-position: -2px -275px;
+}
+.charge-nav .charge-nav-coin {
+	width: 31px;
+	height: 25px;
+	background-position: 0 -29px;
+}
+.charge-nav-container {
+	position: relative;
+}
+.charge-nav-down-block {
+	width: 100%;
+	height: 144px;
+	position: absolute;
+	top: -78px;
+	z-index: 10;
+	/*display: none;*/
+	border-bottom: 1px solid #c4b8b2;
+}
+.charge-nav-down-block{
+	background: #f9f1ed;
+}
+.charge-nav-down {
+	position: static;
+}
+.charge-nav-down li a {
+	background: #f9f1ed;
+	border: none;
+}
+
+/*
+ * 主题部分 
+ */
+.main {
+	position: relative;
+	margin-top: 66px;
+	padding: 10px;
+	background: #fafafa;
+}
+.shadow-block {
+	height: 100%;
+	position: absolute;
+	margin: -10px;
+	display: none;
+	background: url(../img/bg-shadow.png) repeat;
+	z-index: 5;
+}
+.charge-privilege {
+	font-size: 12px;
+	color: #b1b1b1;
+}
+
+/*
+ * 号码填写
+ */
+#charge-phone-num {
+	width: 100%;
+	height: 42px;
+	font-size: 18px;
+	border: 1px solid #b3b3b3;
+	border-radius: 5px;
+}
+.charge-phone-num-block {
+	position: relative;
+}
+.choose-phone-num {
+	width: 40px;
+	height: 38px;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	background: url('../img/icons.png') no-repeat 0 -408px;
+	border: none;
+}
+.cancel-phone-num {
+	width: 40px;
+	height: 38px;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	background: url('../img/icons.png') no-repeat 0 -347px;
+	border: none;
+}
+.num-list{
+	width: 100%;
+	position: absolute;
+	padding: 5px;
+	background: #fff;
+	display: none;
+}
+.num-list li {
+	list-style: none;
+	padding: 7px 0;
+	font-size: 16px;
+	cursor: pointer;
+}
+.charge-location {
+	font-size: 14px;
+	color: #b7b7b7;
+}
+
+/*
+ * 价格选择栏 
+ */
+.charge-price-items {
+	margin-left: 0;
+  padding-left: 0;
+}
+.charge-price-items li {
+	width: 30%;
+	mozila-width: 29%;
+	margin-right: 2%;
+	padding: 10px 0;
+	display: inline-block;
+	list-style-type: none;
+	font-size: 18px;
+	text-align: center;
+	background: url(../img/bg-price-item.png) repeat-x;
+	color: #858585;
+	border: 1px solid #d5d5d5;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.charge-price-items li.act {
+	color: #d40404;
+	border: 2px solid #d40404;
+}
+.charge-price-items li span {
+	font-size: 14px;
+}
+.charge-price {
+	font-size: 14px;
+	color: #888888;
+}
+.charge-price span {
+	font-size: 18px;
+	color: #da0303;
+}
+#submit {
+	width: 100%;
+	height: 40px;
+	background: url(../img/bg-submit.png) repeat-x;
+	color: #fff;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+}
