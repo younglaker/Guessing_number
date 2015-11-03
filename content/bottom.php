@@ -1,0 +1,1 @@
+	<div class="bottom">		<p>2012 . 7 			<a href="http://weibo.com/shaojianghu" target="_blank">@youngLaker</a>		</p>	</div>

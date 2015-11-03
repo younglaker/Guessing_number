@@ -1,350 +1,421 @@
-/*
- *  公共
- */
-* {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-o-box-sizing: content-box;
-	-ms-box-sizing: content-box;
+
+/****************** 公用部分 *****************/
+body{
+	background: #D7FDFA;	
 }
-img{
+@font-face {
+  font-family: 'chicken_butt';	/* 自定义字体名 */
+  src: url('../font/chicken_butt-webfont.eot');
+  src: url('../font/chicken_butt-webfont.eot?#iefix') format('embedded-opentype'),
+	   url('../font/chicken_butt-webfont.woff') format('woff'),
+	   url('../font/chicken_butt-webfont.ttf') format('truetype'),
+	   url('../font/chicken_butt-webfont.svg#SingleMaltaRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'universal';	/* 自定义字体名 */
+  src: url('../font/needlework_good-webfont.eot');
+  src: url('../font/needlework_good-webfont.eot?#iefix') format('embedded-opentype'),
+	   url('../font/needlework_good-webfont.woff') format('woff'),
+	   url('../font/needlework_good-webfont.ttf') format('truetype'),
+	   url('../font/needlework_good-webfont.svg#SingleMaltaRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'snowtopcaps';	/* 自定义字体名 */
+  src: url('../font/snowtopcaps-webfont.eot');
+  src: url('../font/snowtopcaps-webfont.eot?#iefix') format('embedded-opentype'),
+	   url('../font/snowtopcaps-webfont.woff') format('woff'),
+	   url('../font/snowtopcaps-webfont.ttf') format('truetype'),
+	   url('../font/snowtopcaps-webfont.svg#SingleMaltaRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+input[type="submit"]{
 	border: none;
-	-ms-interpolation-mode: bicubic;
+	background: none;
+	font-size: 23px;
 }
-.hidden {
-	display: none;
+.liStyle li{
+	cursor: pointer;
+    background-image: -moz-linear-gradient(center bottom, #91F26B 0%, #53BC61 50%, #53BC61 51%, #91F26B 100%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #91F26B), color-stop(0.5, #53BC61), color-stop(0.51, #53BC61), color-stop(1, #91F26B));	
+	text-indent: 0px;
+	text-align: center;	
 }
-.clear {
-	clear: both;
-}
-.seperation-dotted {
-	width: 100%;
-	height: 1px;
-	margin-bottom: 10px;
-	border-bottom: 1px dashed #d5d5d5;
-}
-.seperation-dotted-2-block {
-	padding: 5px 10px;
-}
-.seperation-dotted-2 {
-	width: 100%;
-	height: 1px;
-	border-bottom: 1px dashed #c7c1be;
-}
-.margin-btm-10 {
-	margin-bottom: 10px;
+.liStyle li:hover,.liStyle li:active{
+/*li和hover、active和:之间不能有空格，不然效果有问题或者不显示 */
+	background: #66DE49;
+	display: block;
 }
 
-/*
- * 头部
- */
-.header {
-	padding: 10px;
-	background: #d40404;
-	position: relative;
-	color: #fff;
-	text-align: center;
-	font-size: 16px;
-	z-index: 40;
-}
-.charge-user-status {
-	width: 34px;
-	height: 24px;
-	position: absolute;
-	top: 5px;
-	right: 20px;
-	text-align: center;
-	border: 2px solid #b00000;
-	border-radius: 3px;
-}
-.charge-user-status #charge-user-logined {
-	width: 19px;
-	height: 19px;
-	background: url(../img/icons.png) no-repeat 0 -305px;
-	margin-top: 2px;
-	display: inline-block;
-}
-.charge-user-status #charge-user-nologin {
-	width: 19px;
-	height: 19px;
-	background: url(../img/icons.png) no-repeat 0 -326px;
-	margin-top: 2px;
-	display: inline-block;
-}
-.charge-user-status #charge-msg-num {
-	width: 18px;
-	height: 17px;
-	padding-top: 3px;
-	padding-left: 1px;
-	position: absolute;
-	top: -6px;
-	right: -6px;
-	color: #675943;
-	font-size: 10px;
-	background: url(../img/ico-msg.png) no-repeat;
+/***************** index页面 ***********************/
+.mainAnimate ul {
+	height: 100px;
 }
 
-/*
- * 
- */
-.ad-full-block {
-	position: relative;
-	z-index: 30;
-}
-.ad-full-block > a {
-	display: inline-block;
-}
-.ad-full {
-	width: 100%;
-}
-.cancel-ad {
-	width: 18px;
-	height: 18px;
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	border: none;
-	background: url(../img/icons.png) no-repeat 0 -387px;
-}
-
-/*
- * 导航菜单栏
- */
-.charge-nav {
-	position: absolute;
-	z-index: 20;
-}
-.charge-nav li {
-	width: 25%;
+.mainAnimate .ball {
 	float: left;
-	list-style-type: none;
-}
-.charge-nav li a {
-	height: 66px;
-	display: block;
-	text-decoration: none;
-	background: #ede0d9;
-	color: #c2aeac;
-	border-right: 1px solid #d5c9c3;
-	border-bottom: 1px solid #d5c9c3;
-	text-align: center;
-}
-.charge-nav .charge-nav-ico {
-	background: url(../img/icons.png) no-repeat;
-	display: inline-block;
-	margin-top: 10px;
-}
-.charge-nav .charge-nav-txt {
-	padding: 5px 0 10px 0;
-	display: block;
-}
-.charge-nav .act {
-	background: #f9f1ed;
-	color: #d40404;
-}
-.charge-nav .charge-nav-phone {
-	width: 20px;
-	height: 28px;
-	background-position: 0 -181px;
-}
-.charge-nav .charge-nav-qq {
-	width: 25px;
-	height: 28px;
-	background-position: 0 -213px;
-}
-.charge-nav .charge-nav-lottery {
-	width: 28px;
-	height: 28px;
-	background-position: 0 -243px;
-}
-.charge-nav .charge-nav-more {
-	width: 28px;
-	height: 28px;
-	background-position: 0 -150px;
-}
-.charge-nav .charge-nav-more-down-box {
-	width: 25%;
-	height: 7px;
-	position: absolute;
-	right: 0;
-}
-.charge-nav .charge-nav-more-down {
-	width: 28px;
-	height: 7px;
-	margin: 0 auto;
-	background: url(../img/ico-more-down.png) no-repeat 0 0;
-}
-.charge-nav .charge-nav-game {
-	width: 30px;
-	height: 25px;
-	background-position: -1 -60px;
-}
-.charge-nav .charge-nav-insurance {
-	width: 30px;
-	height: 25px;
-	background-position: 0 -91px;
-}
-.charge-nav .charge-nav-card {
-	width: 29px;
-	height: 27px;
-	background-position: 0 0;
-}
-.charge-nav .charge-nav-life {
-	width: 30px;
-	height: 26px;
-	background-position: -1px -119px;
-}
-.charge-nav .charge-nav-movie {
-	width: 28px;
-	height: 23px;
-	background-position: -2px -275px;
-}
-.charge-nav .charge-nav-coin {
-	width: 31px;
-	height: 25px;
-	background-position: 0 -29px;
-}
-.charge-nav-container {
-	position: relative;
-}
-.charge-nav-down-block {
-	width: 100%;
-	height: 144px;
-	position: absolute;
-	top: -78px;
-	z-index: 10;
-	/*display: none;*/
-	border-bottom: 1px solid #c4b8b2;
-}
-.charge-nav-down-block{
-	background: #f9f1ed;
-}
-.charge-nav-down {
-	position: static;
-}
-.charge-nav-down li a {
-	background: #f9f1ed;
-	border: none;
-}
-
-/*
- * 主题部分 
- */
-.main {
-	position: relative;
-	margin-top: 66px;
-	padding: 10px;
-	background: #fafafa;
-}
-.shadow-block {
-	height: 100%;
-	position: absolute;
-	margin: -10px;
-	display: none;
-	background: url(../img/bg-shadow.png) repeat;
-	z-index: 5;
-}
-.charge-privilege {
-	font-size: 12px;
-	color: #b1b1b1;
-}
-
-/*
- * 号码填写
- */
-#charge-phone-num {
-	width: 100%;
-	height: 42px;
-	font-size: 18px;
-	border: 1px solid #b3b3b3;
-	border-radius: 5px;
-}
-.charge-phone-num-block {
-	position: relative;
-}
-.choose-phone-num {
 	width: 40px;
-	height: 38px;
-	position: absolute;
-	top: 2px;
-	right: 2px;
-	background: url('../img/icons.png') no-repeat 0 -408px;
-	border: none;
-}
-.cancel-phone-num {
-	width: 40px;
-	height: 38px;
-	position: absolute;
-	top: 2px;
-	right: 2px;
-	background: url('../img/icons.png') no-repeat 0 -347px;
-	border: none;
-}
-.num-list{
-	width: 100%;
-	position: absolute;
-	padding: 5px;
-	background: #fff;
-	display: none;
-}
-.num-list li {
-	list-style: none;
-	padding: 7px 0;
-	font-size: 16px;
-	cursor: pointer;
-}
-.charge-location {
-	font-size: 14px;
-	color: #b7b7b7;
-}
-
-/*
- * 价格选择栏 
- */
-.charge-price-items {
-	margin-left: 0;
-  padding-left: 0;
-}
-.charge-price-items li {
-	width: 30%;
-	mozila-width: 29%;
-	margin-right: 2%;
-	padding: 10px 0;
-	display: inline-block;
-	list-style-type: none;
-	font-size: 18px;
-	text-align: center;
-	background: url(../img/bg-price-item.png) repeat-x;
-	color: #858585;
-	border: 1px solid #d5d5d5;
-	border-radius: 5px;
-	cursor: pointer;
-}
-.charge-price-items li.act {
-	color: #d40404;
-	border: 2px solid #d40404;
-}
-.charge-price-items li span {
-	font-size: 14px;
-}
-.charge-price {
-	font-size: 14px;
-	color: #888888;
-}
-.charge-price span {
-	font-size: 18px;
-	color: #da0303;
-}
-#submit {
-	width: 100%;
 	height: 40px;
-	background: url(../img/bg-submit.png) repeat-x;
+	margin: 0 14px;
+	background: #97E9E8;
+	text-align: center;
+	border-radius: 20px;
+}
+.mainAnimate .ball span {
 	color: #fff;
 	font-size: 18px;
-	border: none;
+	font-weight: bold;
+	line-height: 40px;
+}
+
+.indexOutBox,.outBox{
+	width: 700px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+.outBox{
+	width: 950px;
+}
+.indexBigBox,.bigBox{
+	background: #00BEFF;
+	width: 700px;
+	min-height: 500px;
+	float:right;
+	border-radius: 13px;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+	overflow: auto;/* hidden也行，修正里面有float元素min-height不能自适应高度 */
+}
+.bigBox{
+	width: 600px;
+	margin-left: -21px;
+}
+.indexTitle{
+	font-family: 'chicken_butt';
+	font-size: 80px;
+	color: #fff;
+	margin: 40px 0 0 70px;
+	float: left;
+}
+.menuBox{
+	width: 430px;
+	float: left;
+	margin-bottom: 30px;
+}
+.menu{
+	float: right;
+	width: 170px;
+}
+.menu li{
+	font-family: 'universal';
+	font-size: 50px;
+	width: 170px;
+	height: 70px;
+	float: left;
+	line-height: 68px;
+	margin-top: 30px;
+	border-radius: 13px;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.6);
+}
+
+.subMenu{
+	float: left;
+	display: none;
+	margin-left: 70px;
+}
+.subMenu li{
+	width: 100px;
+	height: 50px;
+	font-size: 18px;
+	letter-spacing: 0px;
+	word-spacing: 1px;
+	line-height: 24px;
+}
+.helpBox,.rankBox,.bomb,.prompt,.submit{
+	position: absolute;
+	display: none;
+}
+.helpBox{
+	width: 440px;
+	height: 340px;
+}
+.helpCancel,.rankCancel,.bombCancel,.prompCancel,.submitCancel{
+	width: 39px;
+	float: right;
+	margin-right: 15px;
+	cursor: pointer;
+}
+.helpOutBox,.rankOutBox,.bombOutBox,.promptOutBox,.submitOutBox{
+	width: 440px;
+	height: 280px;
+	border-radius: 8px 8px 8px 8px ;	
+	background: #E7E7E7;
+	margin-top: 20px;
+	
+}
+.helpInBox,.rankInBox,.bombInBox,.promptInBox,.submitInBox{
+	width: 400px;
+	height: 240px;
+	margin: 2px 0 0 20px;
+	background: #fff;
+	float: left;
+	text-indent: 25px;
+	font-size: 18px;
+	line-height: 20px;
+	word-spacing: 2px;
+	letter-spacing: 1px;
+}
+.rankBox{
+	width: 640px;
+	height: 370px;
+}
+.rankOutBox{
+	width: 640px;
+	height: 350px;
+}
+.rankInBox{
+	width: 600px;
+	height: 310px;
+}
+.rankLeft,.rankRight{
+	width: 296px;
+	float: left;
+}
+.rankLeft{
+	border-right: 2px dashed #E7E7E7;
+}
+.rankInBox li{
+	line-height: 27px;
+	text-indent: 0px;
+}
+.rankInBox li:first-child{
+	color: #f00;
+	font-size: 25px;
+	text-align: center;
+}
+.rankNum{
+	width:60px;
+	display: block;
+	text-align: right;
+	float: left;
+}
+.nameT,.nameR{
+	width: 100px;
+	height: 27px;
+	overflow: hidden;
+	display: block;
+	float: left;
+}
+.timeRecord,.roundRecord{
+	width: 90px;
+	height: 27px;
+	overflow: hidden;	
+	display: block;
+	float: left;
+	text-align: right;
+}
+.bottom{
+	width: 100%;
+	text-align: center;
+	color: #2889C2;
+	float: left;
+	margin: 20px 0 30px 0;
+}
+.bottom a{
+	color: #2889C2;
+}
+.bottom a:hover{
+	color: #00BEFF;
+}
+
+/************* commonmode timemode页面 *******************/
+.konan{
+	float: right;
+	margin-top: 130px;
+}
+.timeBox{
+	width: 380px;
+	height: 50px;
+	background: #fff;
+	float: left;
+	margin: 10px 0 0 90px;
+	border-radius: 6px;
+	box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+.timeBox ul{
+	margin: 10px 0 0 80px;
+}
+.timeBox li{
+	float: left;
+	margin-left: 10px;
+	font-family: 'universal'; 
+	font-size: 30px;
+}
+.listBox{
+	float: left;
+	margin:20px 0 0 70px;
+}
+
+.listBoxA,.listBoxB,.colonBox{
+	height: 50px;
+	float: left;
+	margin-left: 20px;
+	background: #fff;
+	font-size: 35px;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 6px;
+}
+.listBoxA,.listBoxB{
+	width: 60px;
+	overflow: hidden;
+
+}
+.colonBox{
+	width: 20px;
+}
+.listA  li,.listB li{
+	height: 50px;
+	background: #fff;
+}
+.time li{
+	float: left;
+}
+.showNum{
+	width: 100px;
+	color: #00BEFF;
+}
+.guessArea{
+	float: left;
+	margin: 10px 0 0 150px;
+}
+.putNum{
+	width: 130px;
+	height: 50px;
+	float: left;
+	font-size: 40px;
+	text-indent: 10px;
+	border-radius: 10px;
+	letter-spacing:	5px;
+	border: 2px solid #B0ACB1;
+	background: #fff;
+}
+.btnNum{
+	width: 90px;
+	height: 55px;
+	float: left;
+    background-image: -moz-linear-gradient(center bottom, #91F26B 0%, #53BC61 50%, #53BC61 51%, #91F26B 100%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #91F26B), color-stop(0.5, #53BC61), color-stop(0.51, #53BC61), color-stop(1, #91F26B));
+	border: 0px;
+	font-size: 24px;
+	cursor: pointer;
+	margin-left: 20px;
+	border-radius: 10px;
+}
+.btnNum:hover ,.btnNum:active{
+	background: #88E294;
+}
+.showArea{
+	width: 480px;
+	height: 400px;
+	background: #fff;
+	overflow: scroll;
+	float: left;
+	margin: 20px 0 50px 50px;
+	float: left;
+	font-size: 20px;
+}
+.bomb{
+	width: 410px;
+	height: 340px;
+}
+.bombOutBox{
+	width: 410px;
+	height: 320px;
+}
+.bombInBox{
+	width: 370px;
+	height: 270px;
+}
+.bombInBox h1,.submitInBox h1{
+	font-size: 35px;
+	line-height: 40px;
+}
+.bombInBox h2{
+	font-size: 23px;
+	line-height: 60px;
+	letter-spacing: 1px;
+}
+.bombMenu{
+	float: left;
+	margin-left: 100px;
+}
+.bombMenu li{
+	width: 180px;
+	height: 40px;
+	margin-top: 10px;
+	border-radius: 8px;
+	line-height: 35px;
+}
+.rightMenu{
+	width: 130px;
+	height: 250px;
+	float: right;
+	margin: 130px 0 0 10px;
+	background: #00BEFF;
+	border-radius: 8px;
+}
+.rightMenu ul{
+	margin: 30px 0 0 20px;
+}
+.rightMenu li{
+	width: 90px;
+	height: 40px;
+	margin-top: 10px;
+	line-height: 35px;
+	border-radius: 8px;
+}
+.promptInBox p{
+	margin-top: 8px;
+	width: 400px;
+	float: left;
+}
+.promptInBox input[type = "text"]{
+	width: 20px;
+	text-indent: 5px;
+}
+.promptInBox ul{
+	float: left;
+	margin: 20px 0 10px 30px;
+}
+.promptInBox li{
+	width: 80px;
+	height: 40px;
+	float: left;
+	margin-left: 20px;
 	border-radius: 5px;
+	line-height: 35px;
+}
+.promptWrong{
+	color: #f00;
+}
+.promptAnswer{
+	display: none;
+}
+.submitInBox p{
+	margin-top: 10px;
+	float: left;
+}
+.submitInBox input[type = "text"]{
+	width: 170px;
+	height: 25px;
+	font-size: 18px;
+	text-indent: 3px;
+}
+.submitPromt{
+	color: #f00;
+ 	display: none;
 }

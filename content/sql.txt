@@ -1,0 +1,7 @@
+CREATE TABLE `rank` (
+  `id` tinyint(1) NOT NULL auto_increment,
+  `user` varchar(14) NOT NULL,
+  `time` varchar(12) NOT NULL,
+  `round` tinytext NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8 AUTO_INCREMENT=1 ;
