@@ -16,20 +16,31 @@
 		<div class="rightMenu liStyle">
 			<ul>
 				<li>Restart</li>
-				<li>Prompt</li>
-				<li><a href="timemode.php">Challenge</a></li>
-				<li><a href="../index.php">Menu</a></li>
+				<li class="rank">Rank</li>
+				<li><a href="common.html">Common</a></li>
+				<li><a href="../index.html">Menu</a></li>
 			</ul>
 		</div>
 		
 		<!--------- main area ---------->
 		<div class="bigBox">
+
 			<div class="showNum"></div>
 			
 			<!--------- guess box ---------->
 			<div class="guessArea">
-				<input type="text" class="putNum" maxLength="4" />
+				<input type="text" class="putNum" maxLength="4" value="" />
 				<input type="button" class="btnNum liStyle" value="Guess" />
+			</div>
+			
+			<!--------- show time ---------->
+			<div class="timeBox">
+				<ul>
+					<li>Time</li>
+					<li class="timeMin">00</li>
+					<li>:</li>
+					<li class="timeSec">00</li>
+				</ul>
 			</div>
 			
 			<!--------- show the A、B ---------->
@@ -57,10 +68,30 @@
 					</ul>
 				</div>
 			</div>
+			<!--ul class="time">
+				<li class="timeMin">20</li>
+				<li>:</li>
+				<li class="timeSec">00</li>
+			</ul-->
 			
 			<!--------- answer prompt ---------->
 			<div class="showArea"></div>
 			
+			<!--------- rank box ---------->
+			<div class="rankBox">
+				<img class="rankCancel" src="../img/cancel.png" />
+				<div class="rankOutBox">
+					<div class="rankInBox">
+						<ul class="rankLeft">
+							<li>Time Records</li>
+						</ul>
+						<ul class="rankRight">
+							<li>Round Records</li>			
+						</ul>
+					</div>
+				</div>
+			</div>
+
 			<!--------- correct box ---------->
 			<div class="bomb">
 				<img class="bombCancel" src="../img/cancel.png" />
@@ -71,52 +102,48 @@
 							The right number is:
 							<span class="rightNum"></span>
 						</h2>
+						<p>
+							Time-consuming : <span class="timeConsume"></span>
+						</p>
+						<p>
+							Round-consuming : <span class="roundConsume"></span>
+						</p>
 						<ul class="bombMenu liStyle">
 							<li>Restart</li>
-							<li><a href="timemode.php">Challenge Mode</a></li>
-							<li><a href="../index.php">Menu</a></li>
+							<li>Submit Grades</li>
 						</ul>
 					</article>
 				</div>
 			</div>
 			
-			<!--------- prompt th answer ---------->
-			<div class="prompt">
-				<img class="prompCancel" src="../img/cancel.png" />
-				<div class="promptOutBox">
-					<article class="promptInBox">
-						<div class="promptInput">
-							<h2>You have 1 choice to ask whether 2 number exist.</h2>
-							<p>
-								<label>1st number:</label>
-								<input class="checkNum-1" type="text" maxLength="1" value="" />
-							</p>
-							<p>
-								<label>2nd number:</label>
-								<input class="checkNum-2" type="text" maxLength="1" value="" />
-							</p>
-							<p class="promptWrong"></p>
-							<ul class="liStyle">
-									<li>Ask</li>
-									<li>Quit</li>
-							</ul>
-						</div>
-						<div class="promptAnswer">
-							<p class="promptArea-1">Number 
-								<span class="promptNum-1"></span> 
-								<span class="promptIs-1"></span>
-							</p>
-							<p class="promptArea-2">Number 
-								<span class="promptNum-2"></span> 
-								<span class="promptIs-2"></span>
-							</p>
-						</div>
-					</article>
-				</div>				
+			<!--------- submit grades ---------->
+			<div class="submit">
+				<img class="submitCancel" src="../img/cancel.png" />
+				<div class="submitOutBox">
+					<div class="submitInBox">		   	
+						<h1>Congratulations!</h1>
+						<p>Your name : 
+							<input class="submitGrade" name="user" type="text"  maxLength="14" />
+						</p>
+						<p>
+							Time-consuming : <span class="timeConsume"></span>
+						</p>
+						<p>
+							Round-consuming : <span class="roundConsume"></span>
+						</p>
+						<ul class="bombMenu liStyle">
+							<li><input type="submit" class="submitRecord" value="Submit"/></li>
+						</ul>
+						<p class="submitPromt">Submit successfully! Restarting...<p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<img class="konan" src="../img/konan.png" />
-	</div>
-	<? include("bottom.php");?>
+		</div>	<div class="bottom">
+			<p>2012 . 7 
+				<a href="http://weibo.com/shaojianghu" target="_blank">@youngLaker</a>
+			</p>
+		</div>
 </body>
 </html>
